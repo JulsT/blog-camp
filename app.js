@@ -17,7 +17,7 @@ var authRoutes = require("./routes/auth");
 //seedDB();
 
 //mongoose.connect('mongodb://localhost:27017/yelp_camp', { useNewUrlParser: true });
-mongoose.connect('mongodb://kurt:qwerty1@ds211613.mlab.com:11613/blogcamp');
+mongoose.connect('mongodb://kurt:qwerty1@ds211613.mlab.com:11613/blogcamp', { useNewUrlParser: true });
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');

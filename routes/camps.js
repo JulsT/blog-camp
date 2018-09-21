@@ -53,7 +53,7 @@ router.get('/', function(req, res){
  })
  //Update camp
  router.put('/:id',checkCampOwner, function(req, res){
-     Camp.findOneAndUpdate(req.params.id, req.body.camp ,function(err,camp){
+     Camp.findByIdAndUpdate(req.params.id, req.body.camp ,function(err,camp){
          if(err){
              res.render('camps/edit');
          }else{
@@ -63,7 +63,7 @@ router.get('/', function(req, res){
  })
  //delete camp
  router.delete('/:id',checkCampOwner, function(req, res){
-     Camp.findOneAndDelete(req.params.id, function(err){
+     Camp.findByIdAndDelete(req.params.id, function(err){
          if(err){
              console.log(err);
          }
