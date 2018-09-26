@@ -10,17 +10,19 @@
 
 <div class='row text-center'>
     <% camps.forEach(function(camp){ %>
-    <div class='col-md-3 col-sm-6'>
-            <div class="img-thumbnail">
-            <img src='<%=camp.image %>'class="img-fluid">
-            <div class='caption'>
-                <h4> <%= camp.name %> </h4>
-            </div>
-            <p>
-                <a href="/camps/<%= camp._id %>" class="btn btn-primary"> More info</a>
-            </p>
+    <div class='col-md-3 col-sm-6 d-flex'>
+            <div class="img-thumbnail mb-4 d-flex flex-column">
+                <img src='<%=camp.image %>'class="img-fluid">
+                <div class='caption'>
+                    <h4> <%= camp.name %> </h4>
+                </div>
+            
+                <p class='mt-auto'>
+                    <a href="/camps/<%= camp._id %>" class="btn btn-primary"> More info</a>
+                </p>
+                </div>
         </div>
-    </div>
+   
     <% }) %>
 </div>
 
